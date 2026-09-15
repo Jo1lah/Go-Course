@@ -336,10 +336,6 @@ func meHandler(w http.ResponseWriter, r *http.Request) {
 	sendJSON(w, user, http.StatusOK)
 }
 
-// =========================
-// STUDENTS
-// =========================
-
 func getStudents(w http.ResponseWriter, r *http.Request) {
 	_, ok := checkAuth(r)
 
@@ -517,9 +513,8 @@ func deleteStudent(w http.ResponseWriter, r *http.Request) {
 	}, http.StatusOK)
 }
 
-// =========================
-// TEACHERS
-// =========================
+
+
 
 func getTeachers(w http.ResponseWriter, r *http.Request) {
 	_, ok := checkAuth(r)
@@ -667,9 +662,7 @@ func deleteTeacher(w http.ResponseWriter, r *http.Request) {
 	}, http.StatusOK)
 }
 
-// =========================
-// SUBJECTS
-// =========================
+
 
 func getSubjects(w http.ResponseWriter, r *http.Request) {
 	_, ok := checkAuth(r)
@@ -793,6 +786,8 @@ func updateSubject(w http.ResponseWriter, r *http.Request) {
 	sendJSON(w, subject, http.StatusOK)
 }
 
+
+
 func deleteSubject(w http.ResponseWriter, r *http.Request) {
 	_, ok := checkAuth(r)
 
@@ -831,9 +826,8 @@ func deleteSubject(w http.ResponseWriter, r *http.Request) {
 	}, http.StatusOK)
 }
 
-// =========================
-// GRADES
-// =========================
+
+
 
 func getGrades(w http.ResponseWriter, r *http.Request) {
 	_, ok := checkAuth(r)
@@ -870,6 +864,9 @@ func getGradeByID(w http.ResponseWriter, r *http.Request) {
 
 	sendJSON(w, grade, http.StatusOK)
 }
+
+
+
 
 func createGrade(w http.ResponseWriter, r *http.Request) {
 	_, ok := checkAuth(r)
@@ -925,6 +922,9 @@ func createGrade(w http.ResponseWriter, r *http.Request) {
 
 	sendJSON(w, grade, http.StatusCreated)
 }
+
+
+
 
 func updateGrade(w http.ResponseWriter, r *http.Request) {
 	_, ok := checkAuth(r)
@@ -995,6 +995,9 @@ func updateGrade(w http.ResponseWriter, r *http.Request) {
 	sendJSON(w, grade, http.StatusOK)
 }
 
+
+
+
 func deleteGrade(w http.ResponseWriter, r *http.Request) {
 	_, ok := checkAuth(r)
 
@@ -1033,9 +1036,7 @@ func deleteGrade(w http.ResponseWriter, r *http.Request) {
 	}, http.StatusOK)
 }
 
-// =========================
-// STUDENT GRADES
-// =========================
+
 
 func getStudentGrades(w http.ResponseWriter, r *http.Request) {
 	_, ok := checkAuth(r)
@@ -1087,9 +1088,8 @@ func getStudentGrades(w http.ResponseWriter, r *http.Request) {
 	sendJSON(w, result, http.StatusOK)
 }
 
-// =========================
-// HOMEWORK
-// =========================
+
+
 
 func getHomeworks(w http.ResponseWriter, r *http.Request) {
 	_, ok := checkAuth(r)
